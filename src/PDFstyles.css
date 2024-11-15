@@ -1,0 +1,119 @@
+* {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: #4A0B0B; /* Dark red background */
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    background-color: transparent;
+    color: white;
+    width: 100%;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+nav a {
+    margin-left: 20px;
+    color: rgb(255, 255, 255);
+}
+
+nav a:hover {
+    color: #FFD700; /* Gold color on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.file-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    width: 800px;
+    height: 300px;
+    background-color: #8B0000; /* Dark red for file container */
+    margin-top: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+}
+
+.file-container:hover {
+    transform: scale(1.02);
+}
+
+i {
+    
+    margin-top: -20px;
+    font-size: 70px;
+}
+
+.custom-file-upload {
+    margin-top: 35px;
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #B22222; 
+    color: #ffffff; /* White text for better contrast */
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.custom-file-upload:hover {
+    background-color: #C72A2A; /* Lighter red on hover */
+    transform: translateY(-3px); /* Lift effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
+.custom-file-upload input[type="file"] {
+    display: none;
+}
+
+.button-file {
+    margin-top: 20px;
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.spinner {
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    border-left-color: #FF4500; /* OrangeRed for spinner */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
